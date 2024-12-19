@@ -25,7 +25,9 @@ function adicionar(){
                 var item = document.createElement('option');
                 item.text = `Valor ${numValue} foi adicionado`;
                 lista.appendChild(item);
+                res.innerHTML = '';
                 lista.add(numValue);
+                
             }
         }
     }
@@ -36,8 +38,7 @@ function finalizar(){
         alert('A lista está vazia.');
     }else{
         let total = existentes.length;
-
-
+        
         res.innerHTML = '';
         res.innerHTML += `<p>Total de valores adicionados: ${total}</p>`;
         res.innerHTML += `<p>Maior valor: ${Math.max(...existentes)}</p>`;
